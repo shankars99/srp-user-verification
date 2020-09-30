@@ -20,7 +20,8 @@ signup.route('/signup')
 .post((req,res,next) => {
     res.statusCode = 200;
 
-    const pythonProcess = spawn('python',["pyScripts/hello.py", req.body.name, req.body.age]);
+    const pythonProcess = spawn('python',["pyScripts/qr-gen.py", req.body.name, req.body.aadharNum,
+                                        req.body.dob, req.body.addr, req.body.phone, req.body.email]);
 
     pythonProcess.stdout.on('data', function(data) {
         console.log(data.toString());
