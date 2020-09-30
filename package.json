@@ -1,0 +1,25 @@
+{
+  "name": "srp-user-verification",
+  "version": "1.0.0",
+  "description": "a project that verifies the person based on QR and Face",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shankars99/srp-user-verification.git"
+  },
+  "keywords": [],
+  "author": "Shankar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shankars99/srp-user-verification/issues"
+  },
+  "homepage": "https://github.com/shankars99/srp-user-verification#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "python-shell": "^2.0.2"
+  }
+}
