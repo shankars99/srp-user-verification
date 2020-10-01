@@ -6,8 +6,10 @@ labels = ["Name:", "Aadhar Number:", "Date of Birth:", "Address:", "Phone num:",
 
 for i in range(len(labels)):
     data += labels[i] + sys.argv[i+1] + ";"
+#print(data)
 
 filename = "models/"+sys.argv[1]+".png"
+
 img = qrcode.make(data)
 img.save(filename)
 
