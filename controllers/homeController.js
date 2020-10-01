@@ -9,8 +9,9 @@ home.use(bodyParser.json());
 home.route('/home')
 .get((req,res,next) => {
     res.statusCode = 200;
+    console.log("hello");
     res.setHeader('Content-Type', 'text/html');
-    res.sendFile('home.html', {root: loc});
+    res.sendFile('/homePage.html', {root: loc});
 })
 
 module.exports = home;

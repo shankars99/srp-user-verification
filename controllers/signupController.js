@@ -1,9 +1,7 @@
 const express       = require('express');
 const bodyParser    = require('body-parser');
-const {PythonShell} = require('python-shell');
-const spawn = require("child_process").spawn;
-
-const signup          = express.Router();
+const spawn         = require("child_process").spawn;
+const signup        = express.Router();
 //creating express router
 
 //using body parser to read values of fields(such as field name) in webpages
@@ -15,7 +13,7 @@ signup.route('/signup')
     res.statusCode = 200;
 
     res.setHeader('Content-Type', 'text/html');
-    res.sendFile('signupForm.html', {root: loc});
+    res.sendFile('/signupUser.html', {root: loc});
 })
 .post((req,res,next) => {
     res.statusCode = 200;
@@ -27,7 +25,7 @@ signup.route('/signup')
         console.log(data.toString());
     });
     res.setHeader('Content-Type', 'text/html');
-    res.sendFile('signupForm.html', {root: loc});
+    res.sendFile('/signupUser.html', {root: loc});
 })
 
 module.exports = signup;
