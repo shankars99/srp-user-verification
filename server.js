@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('public'))
 app.use(express.static('assets'))
 app.use(express.static('images'))
+app.use(express.static('models'))
 
 //app.use(morgan('combined'))
 
