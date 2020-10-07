@@ -1,2 +1,3 @@
 node_modules
 models/*
+pyScripts/kaggle/input/face-mask-detection-datase/*
