@@ -1,3 +1,6 @@
 node_modules
 models/*
 pyScripts/kaggle/input/face-mask-detection-datase/*
+input/.ipynb_checkpoints/
+input/face-mask-detection-dataset/Medical mask/
+input/submission_1.csv
