@@ -17,4 +17,4 @@ express
 body-parser
 cookie-parser
 
-npm i express body-parser cookie-parser
+npm install
