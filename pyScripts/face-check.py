@@ -1,3 +1,6 @@
+#use conda env with python 3.6.
+#if your name is me: than conda activate myenv
+
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
@@ -10,8 +13,8 @@ root_dir = "/home/shankar/git-repo/srp-user-verification/pyScripts/"
 
 model = keras.models.load_model(root_dir +"saves")
 
-test_real_images       = root_dir + "../views"
-img_num = "person_no_mask"
+test_real_images       = root_dir + "../models"
+img_num = "person_with_mask"
 
 img=cv2.imread(os.path.join(test_real_images,img_num+'.jpeg'))
 #plt.imshow(img)
