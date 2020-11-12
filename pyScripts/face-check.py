@@ -10,26 +10,21 @@ import cv2
 from tensorflow import keras
 
 root_dir = "/home/shankar/git-repo/srp-user-verification/pyScripts/"
+model    = keras.models.load_model(root_dir +"saves")
 
-model = keras.models.load_model(root_dir +"saves")
+test_images = root_dir + "../models"
+img_num     = "images"
 
-test_real_images       = root_dir + "../models"
-img_num = "person_with_mask"
+img=cv2.imread(os.path.join(test_images,img_num+'.jpeg'))
 
-img=cv2.imread(os.path.join(test_real_images,img_num+'.jpeg'))
-#plt.imshow(img)
+img=cv2.imread(os.path.join(test_images,img_num+'.jpeg'),cv2.IMREAD_GRAYSCALE)
 new_img=cv2.resize(img,(50,50))
 new_img=new_img.reshape(-1,50,50,1)
-predict=model.predict(new_img)
+#predict=model.predict(new_img)
+predict = np.argmax(model.predict(new_img) > 0.5).astype("int32")
 #print(predict)
 
-img=cv2.imread(os.path.join(test_real_images,img_num+'.jpeg'),cv2.IMREAD_GRAYSCALE)
-new_img=cv2.resize(img,(50,50))
-new_img=new_img.reshape(-1,50,50,1)
-predict=model.predict(new_img)
-#print(predict)
-
-if predict[0][0] == 1:
+if predict == 0:
     print("no mask")
 else:
-    print("mask")
+    print("wearing mask")
