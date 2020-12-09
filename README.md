@@ -1,20 +1,22 @@
 # srp-user-verification
-a project that verifies the person based on QR and Face
+Project that verifies the person based on QR and Face
 
-done by
-Shankar Subramanian(2018115102)
-Prithviraj Kalaiselvan(2018115077)
+Done by: <br />
+Shankar Subramanian(2018115102) <br />
+Prithviraj Kalaiselvan(2018115077) <br />
 
-python libraries:
+Python libraries:<br />
 
-qrcode
-conda install qrcode --channel conda-forge
+>os (pre installed)<br />
+>qrcode<br />
+>pillow<br />
+>cv2<br />
+>numpy<br />
+>tensorflow<br />
+>keras<br />
 
+npm libraries:<br />
 
-node libraries:
-
-express
-body-parser
-cookie-parser
-
-npm install
+>express<br />
+>body-parser<br />
+>cookie-parser <br />
